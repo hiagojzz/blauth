@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miss Oktoberfest 2023</title>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos gerais */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos específicos */
+    .hero-section {
+      text-align: center;
+      padding: 100px 0;
+      background-color: #f2f2f2;
+    }
+
+    .hero-section h1 {
+      font-size: 48px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 24px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff5722;
+      color: #fff;
+      font-size: 18px;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ff7f33;
+    }
+
+    .social-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-buttons a:hover {
+      background-color: #555;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 4px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .modal-content p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+	
+	.candidate-photo {
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+	
+	/* Estilos adicionais */
+    body {
+      background-color: #f7f7f7;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff5722;
+      color: #fff;
+      font-size: 18px;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .cta-button:hover {
+      background-color: #ff7f33;
+    }
+
+    .social-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-buttons a {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .social-buttons a:hover {
+      background-color: #555;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 4px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .modal-content p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Responsividade para dispositivos móveis */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .cta-button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      .social-buttons a {
+        font-size: 14px;
+        padding: 10px 20px;
+	  }
+
+      .social-buttons a:hover {
+        background-color: #555;
+      }
+  </style>
+  <script>
+    function openModal() {
+      document.getElementById("modal-overlay").style.display = "flex";
+    }
+	 function closeModal() {
+      document.getElementById("modal-overlay").style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <section class="hero-section">
+    <div class="container">
+      <h1>Miss Oktoberfest 2023</h1>
+	  <img class="candidate-photo" src="https://i.imgur.com/DmUifaD.png" alt="Foto da candidata">
+      <p>Conheça a candidata mais encantadora para o título de Miss Oktoberfest deste ano.</p>
+      <a href="#" class="cta-button" onclick="openModal()">Saiba Mais</a>
+	  <p>Acesse o instagram e siga esse anjo. (mas olha lá que eu tenho ciúmes blz)</p>
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/gabi_blauth" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h2>Conheça nossa candidata</h2>
+      <p>A candidata ao título de Miss Oktoberfest 2023 é uma jovem talentosa e carismática que representa o espírito da festa. Ela é apaixonada pela cultura alemã e especialmente por cavalos. Está pronta para compartilhar sua história e seus sonhos com todos os participantes do evento. Não perca a oportunidade de conhecê-la pessoalmente e torcer por ela!</p>
+    </div>
+  </div>
+</body>
+</html>
